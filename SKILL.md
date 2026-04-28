@@ -18,7 +18,7 @@ consumes it through `UIViewControllerRepresentable`. This skill covers both dire
 
 | Topic | Link |
 |-------|------|
-| Compose Multiplatform ↔ SwiftUI | https://kotlinlang.org/docs/multiplatform/swiftui-compose-integration.html |
+| Compose Multiplatform ↔ SwiftUI | https://kotlinlang.org/docs/multiplatform/compose-swiftui-integration.html |
 | Compose Multiplatform ↔ UIKit | https://kotlinlang.org/docs/multiplatform/compose-uikit-integration.html |
 | UIViewControllerRepresentable | https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable |
 | makeCoordinator() | https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator()-9vwm8 |

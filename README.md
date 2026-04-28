@@ -13,7 +13,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Compose Multiplatform](https://img.shields.io/badge/CMP-1.8+-4CAF50)](https://www.jetbrains.com/compose-multiplatform/)
-[![Swift](https://img.shields.io/badge/Swift-6.x-FA7343?logo=swift&logoColor=white)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?logo=swift&logoColor=white)](https://swift.org)
 [![iOS stable](https://img.shields.io/badge/iOS-stable%20since%201.8-blue)](https://www.jetbrains.com/compose-multiplatform/)
 [![Works with Claude](https://img.shields.io/badge/Works%20with-Claude-9370DB)](https://claude.ai)
 [![Works with GitHub Copilot](https://img.shields.io/badge/Works%20with-GitHub%20Copilot-2ea44f?logo=github)](https://github.com/features/copilot)
@@ -35,7 +35,7 @@ Compose Multiplatform and SwiftUI.**
 - ✅ **SwiftUI-in-Compose** — `UIKitView`, `UIKitViewController`, `UIHostingController` for the reverse direction
 - ✅ **UIKit embedding** — maps, text fields, camera, pickers via `UIKitView`/`UIKitViewController`
 - ✅ **Teardown** — `dismantleUIViewController` for cleanup, `AsyncStream.onTermination` for flow safety
-- ✅ **Touch interactivity** — `interactive` / `interactionMode` for gesture routing
+- ✅ **Touch interactivity** — `UIKitInteropProperties` / `UIKitInteropInteractionMode` for cooperative vs non-cooperative gesture routing
 - ✅ **Apple doc citations** — `makeCoordinator()`, `updateUIViewController`, `dismantleUIViewController`, `UIHostingController` official quotes
 - ✅ **`Info.plist` requirement** — the `CADisableMinimumFrameDurationOnPhone` entry that prevents crashes
 
@@ -128,7 +128,7 @@ Full patterns with code in [`references/state-sharing.md`](references/state-shar
 
 | Topic | Link |
 |-------|------|
-| Compose Multiplatform ↔ SwiftUI | https://kotlinlang.org/docs/multiplatform/swiftui-compose-integration.html |
+| Compose Multiplatform ↔ SwiftUI | https://kotlinlang.org/docs/multiplatform/compose-swiftui-integration.html |
 | Compose Multiplatform ↔ UIKit | https://kotlinlang.org/docs/multiplatform/compose-uikit-integration.html |
 | Apple `UIViewControllerRepresentable` | https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable |
 | Apple `makeCoordinator()` | https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator()-9vwm8 |
@@ -142,14 +142,12 @@ Full patterns with code in [`references/state-sharing.md`](references/state-shar
 
 | | Version |
 |---|---|
-| Compose Multiplatform | 1.6+ (1.8+ for **stable** iOS support) |
-| Kotlin | 1.9+ |
+| Compose Multiplatform | 1.8+ (iOS **stable** since 1.8.0, May 2025) |
+| Kotlin | 2.1+ |
 | Swift | 5.9+ |
 | iOS | 15.0+ |
 
-> Compose Multiplatform iOS is **stable** as of version 1.8.0 (May 2025).
-
----
+> Compose Multiplatform iOS is **stable** as of version 1.8.0 (May 2025). CMP 1.8+ requires Kotlin 2.1+.
 
 ---
 

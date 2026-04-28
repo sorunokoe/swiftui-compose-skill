@@ -1,6 +1,6 @@
 # Compose Multiplatform in SwiftUI
 
-> **Official reference**: https://kotlinlang.org/docs/multiplatform/swiftui-compose-integration.html  
+> **Official reference**: https://kotlinlang.org/docs/multiplatform/compose-swiftui-integration.html  
 > **Official interop examples**: https://github.com/JetBrains/compose-multiplatform/tree/master/examples/interop/ios-compose-in-swiftui  
 > **Apple UIViewControllerRepresentable**: https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable  
 > **Apple sample — Using SwiftUI with UIKit**: https://developer.apple.com/documentation/UIKit/using-swiftui-with-uikit (WWDC22)  
@@ -111,9 +111,13 @@ This is Apple's recommended mechanism:
 
 > *"Implement this method if changes to your view controller might affect other parts of your app.
 > In your implementation, create a custom Swift instance that can communicate with other parts of
-> your interface. SwiftUI calls this method before calling `makeUIViewController(context:)`.
-> The system provides your coordinator either directly or as part of a context structure when
-> calling the other methods of your representable instance."*
+> your interface. For example, you might provide an instance that binds its variables to SwiftUI
+> properties, causing the two to remain synchronized. If your view controller doesn't interact with
+> other parts of your app, providing a coordinator is unnecessary.*
+>
+> *SwiftUI calls this method before calling `makeUIViewController(context:)`. The system provides
+> your coordinator either directly or as part of a context structure when calling the other methods
+> of your representable instance."*
 > — [makeCoordinator()](https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator()-9vwm8) Apple Developer Documentation
 
 > *"When the state of your app changes, SwiftUI updates the portions of your interface affected by

@@ -16,7 +16,7 @@ corrections, and additions make it better for every developer doing Compose ↔ 
 
 ## Principles
 
-1. **Grounded in official docs** — cite [kotlinlang.org](https://kotlinlang.org/docs/multiplatform/swiftui-compose-integration.html) or Apple developer docs. If undocumented, label it clearly.
+1. **Grounded in official docs** — cite [kotlinlang.org](https://kotlinlang.org/docs/multiplatform/compose-swiftui-integration.html) or Apple developer docs. If undocumented, label it clearly.
 2. **Battle-tested** — include only patterns that work in production apps.
 3. **Explicit about tradeoffs** — show both ✅ correct pattern and ❌ anti-pattern with a *why*.
 4. **AI-agent-friendly** — skills are read under token budget. Every sentence earns its place.

@@ -1,6 +1,6 @@
 # State Sharing — Compose Multiplatform ↔ SwiftUI
 
-> **Official reference**: https://kotlinlang.org/docs/multiplatform/swiftui-compose-integration.html  
+> **Official reference**: https://kotlinlang.org/docs/multiplatform/compose-swiftui-integration.html  
 > **Apple makeCoordinator()**: https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator()-9vwm8  
 > **Apple updateUIViewController**: https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/updateuiviewcontroller(_:context:)  
 > **Apple dismantleUIViewController**: https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/dismantleuiviewcontroller(_:coordinator:)  
@@ -17,6 +17,18 @@ changes, only `updateUIViewController` is called. This means:
 - You must push state changes **into** the existing controller via update methods.
 
 The solution is the **Coordinator pattern**.
+
+## State Ownership Decision Tree
+
+```
+Does Compose need to know about SwiftUI state changes?
+├── No → Pattern 1: Unidirectional (Compose owns state)
+└── Yes → Is it only SwiftUI → Compose?
+           ├── Yes → Pattern 2: Unidirectional Push (coordinator + updateFilters)
+           └── No → Pattern 3: Bidirectional (callbacks + coordinator)
+```
+
+---
 
 ### Apple's Lifecycle Guarantee (from the docs)
 
@@ -317,16 +329,4 @@ AsyncStream { continuation in
 
 When adapting Kotlin flows (via SKIE), the same `onTermination` pattern ensures the driving
 `Task` is cancelled when the consumer stops iterating — see `swift-kmp/references/flow-bridging.md`.
-
----
-
-## State Ownership Decision Tree
-
-```
-Does Compose need to know about SwiftUI state changes?
-├── No → Pattern 1: Unidirectional (Compose owns state)
-└── Yes → Is it only SwiftUI → Compose?
-           ├── Yes → Pattern 2: Unidirectional Push (coordinator + updateFilters)
-           └── No → Pattern 3: Bidirectional (callbacks + coordinator)
-```
 

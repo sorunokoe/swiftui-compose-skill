@@ -50,8 +50,9 @@ When modifying any file in this repository:
 1. **No project-specific names** — use `<ModuleName>Kt`, generic feature names
 2. **Both ✅ and ❌ examples required** — never show only the correct pattern
 3. **Official doc links must be live** — verify Apple docs URLs
-4. **The Info.plist requirement must stay** — `CADisableMinimumFrameDurationOnPhone = YES` is always required; never remove this note
-5. **Apple doc quotes must be verbatim** — don't paraphrase Apple's official documentation
+4. **JetBrains doc links must be live** — verify `kotlinlang.org/docs/multiplatform/` URLs (the SwiftUI integration URL has changed before; always confirm with `curl -sI`)
+5. **The Info.plist requirement must stay** — `CADisableMinimumFrameDurationOnPhone = YES` is always required; never remove this note
+6. **Apple doc quotes must be verbatim** — don't paraphrase Apple's official documentation
 
 ---
 
