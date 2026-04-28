@@ -6,8 +6,6 @@
   ┃                                                     ┃
   ┃   Compose  ◄────────────────────────────► SwiftUI   ┃
   ┃                                                     ┃
-  ┃   UIViewControllerRepresentable · makeCoordinator() ┃
-  ┃                                                     ┃
   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
