@@ -1,15 +1,14 @@
-```
-  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-  ┃                                                     ┃
-  ┃   ◆  swiftui · compose             AI Coding Skill  ┃
-  ┃   ─────────────────────────────────────────────     ┃
-  ┃                                                     ┃
-  ┃   Compose  ◄────────────────────────────► SwiftUI   ┃
-  ┃                                                     ┃
-  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-```
-
 <div align="center">
+```
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                     ┃
+┃   ◆  swiftui · compose             AI Coding Skill  ┃
+┃   ─────────────────────────────────────────────     ┃
+┃                                                     ┃
+┃   Compose  ◄────────────────────────────► SwiftUI   ┃
+┃                                                     ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Compose Multiplatform](https://img.shields.io/badge/CMP-1.8+-4CAF50)](https://www.jetbrains.com/compose-multiplatform/)
