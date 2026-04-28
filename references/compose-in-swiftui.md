@@ -130,7 +130,7 @@ This is Apple's recommended mechanism:
 // Coordinator holds the Kotlin state wrapper (created once per representable lifetime):
 final class MapCoordinator {
     // Created once — holds the Kotlin UIViewController and its state bridge:
-    let holder: MapViewControllerHolder
+    let holder: MapViewControllerHolder()
     let controller: UIViewController
 
     init(component: AppComponent, initialFilters: [MapFilter]) {
@@ -140,7 +140,7 @@ final class MapCoordinator {
     }
 
     func updateFilters(_ filters: [MapFilter]) {
-        holder.updateFilters(newFilters: filters)
+        holder.updateFilters(filters)
     }
 }
 

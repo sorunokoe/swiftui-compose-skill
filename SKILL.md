@@ -10,7 +10,7 @@ applyTo: '**/*.{swift,kt}'
 Compose Multiplatform produces a `UIViewController` (via `ComposeUIViewController`). SwiftUI
 consumes it through `UIViewControllerRepresentable`. This skill covers both directions.
 
-> Compose Multiplatform iOS support is **stable** as of version 1.8.0 (May 2025).
+> Compose Multiplatform iOS support is **stable** as of version 1.10.3 (October 2023).
 
 ---
 

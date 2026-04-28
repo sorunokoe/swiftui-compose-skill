@@ -45,7 +45,7 @@ When Compose fully controls its own state and SwiftUI only positions it:
 ```swift
 struct ComposeFeatureView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
-        FeatureKt.FeatureViewController()  // Compose ViewModel inside owns all state
+        FeatureKt.FeatureViewController()  // Ensure this is updated to the latest API usage.
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
@@ -77,7 +77,7 @@ class FilterableViewControllerHolder(private val initialFilters: List<String>) {
     }
 
     fun updateFilters(newFilters: List<String>) {
-        filters.value = newFilters  // Compose recomposits automatically
+        filters.value = newFilters  // Compose recomposes automatically
     }
 }
 ```
@@ -110,7 +110,7 @@ struct FilterableComposeView: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        context.coordinator.update(filters: filters)
+        context.coordinator.update(filters: filters)  // Ensure filters are updated correctly.
         // Called on every SwiftUI state change — pushes into Compose
     }
 }
@@ -130,7 +130,7 @@ Add callback parameters to the controller factory:
 ```kotlin
 class MapViewControllerHolder(
     initialFilters: List<MapFilter>,
-    private val onMarkerClick: (String) -> Unit  // Compose → Swift callback
+    private val onMarkerClick: (String) -> Unit  // Compose → Swift callback (ensure compatibility with latest API)
 ) {
     private val filtersState = mutableStateOf(initialFilters)
 
