@@ -158,6 +158,16 @@ Full patterns with code in [`references/state-sharing.md`](references/state-shar
 
 ---
 
+## Automated Maintenance
+
+This skill is governed by [**skills-evolution**](https://github.com/sorunokoe/skills-evolution).
+A monthly GitHub Actions workflow ([`.github/workflows/skill-health.yml`](.github/workflows/skill-health.yml)) runs an OSS skill health check:
+
+- **Structural audit** — broken local links, missing frontmatter fields
+- **AI content update** — checks `SKILL.md` + `references/*.md` against the latest `compose-multiplatform` release; proposes conservative patches via GitHub Models
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to improve patterns or add new reference files.
