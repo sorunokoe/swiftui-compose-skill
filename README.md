@@ -25,7 +25,7 @@
 **An AI coding skill for bidirectional interop between  
 Compose Multiplatform and SwiftUI.**
 
-[What it covers](#what-this-skill-covers) · [Files](#files) · [Core principle](#core-principle) · [Quick start](#quick-start)
+[What it covers](#what-this-skill-covers) · [Files](#files) · [Core principle](#core-principle) · [Quick start](#quick-start) · [Key rules](#key-rules-summary) · [Docs](#official-documentation) · [Automated maintenance](#automated-maintenance)
 
 </div>
 
@@ -68,30 +68,40 @@ Apple's documentation confirms the intended lifecycle:
 
 ## Files
 
-| File | Load when |
-|------|-----------|
-| [`SKILL.md`](SKILL.md) | **Always first** — anti-patterns, quick reference, review checklist |
-| [`references/compose-in-swiftui.md`](references/compose-in-swiftui.md) | Embedding Compose in SwiftUI; coordinator wiring; `ComposeUIViewController` Kotlin setup |
-| [`references/swiftui-in-compose.md`](references/swiftui-in-compose.md) | Embedding SwiftUI/UIKit inside Compose; `UIKitViewController`; `UIKitView` |
-| [`references/state-sharing.md`](references/state-sharing.md) | Bidirectional state; all 3 patterns; `StateFlow` → `AsyncStream`; `dismantleUIViewController` |
+| File | Load when | Tokens |
+|------|-----------|--------|
+| [`SKILL.md`](SKILL.md) | **Always first** — anti-patterns, quick reference, review checklist | ~1.5k |
+| [`references/compose-in-swiftui.md`](references/compose-in-swiftui.md) | Embedding Compose in SwiftUI; coordinator wiring; `ComposeUIViewController` Kotlin setup | ~2k |
+| [`references/swiftui-in-compose.md`](references/swiftui-in-compose.md) | Embedding SwiftUI/UIKit inside Compose; `UIKitViewController`; `UIKitView` | ~2k |
+| [`references/state-sharing.md`](references/state-sharing.md) | Bidirectional state; all 3 patterns; `StateFlow` → `AsyncStream`; `dismantleUIViewController` | ~2.5k |
+
+> **Token budget:** `SKILL.md` (~1.5k tokens) covers anti-patterns and routing. Load one reference only when you need the detailed API for that topic.
 
 ---
 
 ## Quick Start
 
-### GitHub Copilot
+### 1. Install
 
 ```bash
-# Copy to your repo:
-cp -r swiftui-compose /path/to/your-project/.github/skills/
+# Clone into the canonical skill location:
+git clone https://github.com/sorunokoe/swiftui-compose-skill.git \
+  /path/to/your-project/.github/skills/swiftui-compose
+
+# Optional: detach from upstream git history
+rm -rf /path/to/your-project/.github/skills/swiftui-compose/.git
 ```
 
-Then in Copilot Chat:
+> **Why `.github/skills/swiftui-compose/`?** This is the path GitHub Copilot, Cursor, and
+> [skills-evolution](https://github.com/sorunokoe/skills-evolution) discover skills from.
+
+### 2. Use with GitHub Copilot
+
 ```
 @swiftui-compose Help me embed a Compose map screen in my SwiftUI app with filter state
 ```
 
-### Claude / Any AI agent
+### 3. Use with Claude / any AI agent
 
 ```
 Load swiftui-compose/SKILL.md, then swiftui-compose/references/state-sharing.md.
@@ -100,6 +110,8 @@ I need to embed a Kotlin Compose map screen in SwiftUI. The SwiftUI side has
 @State var filters: [MapFilter] that need to flow into Compose when they change.
 Compose calls back via onMarkerClick. Implement the full coordinator pattern.
 ```
+
+---
 
 ---
 
@@ -132,13 +144,13 @@ Full patterns with code in [`references/state-sharing.md`](references/state-shar
 
 | Topic | Link |
 |-------|------|
-| Compose Multiplatform ↔ SwiftUI | https://kotlinlang.org/docs/multiplatform/compose-swiftui-integration.html |
-| Compose Multiplatform ↔ UIKit | https://kotlinlang.org/docs/multiplatform/compose-uikit-integration.html |
-| Apple `UIViewControllerRepresentable` | https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable |
-| Apple `makeCoordinator()` | https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator()-9vwm8 |
-| Apple `dismantleUIViewController` | https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/dismantleuiviewcontroller(_:coordinator:) |
-| Apple `UIHostingController` | https://developer.apple.com/documentation/swiftui/uihostingcontroller |
-| Compose Multiplatform interop examples | https://github.com/JetBrains/compose-multiplatform/tree/master/examples/interop |
+| Compose Multiplatform ↔ SwiftUI | [kotlinlang.org →](https://kotlinlang.org/docs/multiplatform/compose-swiftui-integration.html) |
+| Compose Multiplatform ↔ UIKit | [kotlinlang.org →](https://kotlinlang.org/docs/multiplatform/compose-uikit-integration.html) |
+| Apple `UIViewControllerRepresentable` | [developer.apple.com →](https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable) |
+| Apple `makeCoordinator()` | [developer.apple.com →](https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/makecoordinator()-9vwm8) |
+| Apple `dismantleUIViewController` | [developer.apple.com →](https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable/dismantleuiviewcontroller(_:coordinator:)) |
+| Apple `UIHostingController` | [developer.apple.com →](https://developer.apple.com/documentation/swiftui/uihostingcontroller) |
+| Compose Multiplatform interop examples | [github.com/JetBrains →](https://github.com/JetBrains/compose-multiplatform/tree/master/examples/interop) |
 
 ---
 
@@ -164,24 +176,50 @@ Full patterns with code in [`references/state-sharing.md`](references/state-shar
 
 ## Automated Maintenance
 
-This skill is governed by [**skills-evolution**](https://github.com/sorunokoe/skills-evolution).
+This skill is governed by [**skills-evolution**](https://github.com/sorunokoe/skills-evolution) — AI skill governance that keeps guidance files accurate and up to date automatically.
 
-### gh-aw agentic workflows (recommended)
+### gh-aw (recommended)
 
 ```bash
-# PR review — posts AI feedback on every PR touching SKILL.md or references/**
+# PR review — AI feedback on every PR touching SKILL.md or references/**
 gh aw add sorunokoe/skills-evolution/workflows/oss-skill-pr-check.md@latest
-# Monthly update — checks version references and doc links
+
+# Monthly update — version checks, AI content patches, opens PR
 gh aw add sorunokoe/skills-evolution/workflows/oss-skill-update.md@latest
+
 gh aw compile
 ```
 
-### GitHub Actions (already configured)
+### GitHub Actions
 
-[`.github/workflows/skill-health.yml`](.github/workflows/skill-health.yml) runs monthly and on demand:
+<details>
+<summary>Monthly skill health workflow</summary>
+
+[`.github/workflows/skill-health.yml`](.github/workflows/skill-health.yml) — runs monthly and on demand:
 
 - **Structural audit** — broken local links, missing frontmatter fields
 - **AI content update** — checks `SKILL.md` + `references/*.md` against the latest `compose-multiplatform` release; proposes conservative patches via GitHub Models
+
+```yaml
+# .github/workflows/skill-health.yml
+name: Skill Health
+on:
+  schedule:
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+  models: read
+jobs:
+  health:
+    uses: sorunokoe/skills-evolution/.github/workflows/oss_skill_health.yml@latest
+    with:
+      enable_ai_skill_update: true
+    secrets:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
+```
+</details>
 
 ---
 
