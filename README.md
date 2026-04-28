@@ -34,15 +34,16 @@ Compose Multiplatform and SwiftUI.**
 
 ## What This Skill Covers
 
-- ✅ **Compose-in-SwiftUI** — `ComposeUIViewController` + `UIViewControllerRepresentable` wiring
-- ✅ **Stateless embedding** — full-screen Compose apps with SwiftUI shell (navigation, tab bar)
-- ✅ **Bidirectional state** — `makeCoordinator()` + `update` closure pattern, Kotlin `mutableStateOf` bridge
-- ✅ **SwiftUI-in-Compose** — `UIKitView`, `UIKitViewController`, `UIHostingController` for the reverse direction
-- ✅ **UIKit embedding** — maps, text fields, camera, pickers via `UIKitView`/`UIKitViewController`
-- ✅ **Teardown** — `dismantleUIViewController` for cleanup, `AsyncStream.onTermination` for flow safety
-- ✅ **Touch interactivity** — `UIKitInteropProperties` / `UIKitInteropInteractionMode` for cooperative vs non-cooperative gesture routing
-- ✅ **Apple doc citations** — `makeCoordinator()`, `updateUIViewController`, `dismantleUIViewController`, `UIHostingController` official quotes
-- ✅ **`Info.plist` requirement** — the `CADisableMinimumFrameDurationOnPhone` entry that prevents crashes
+| | |
+|---|---|
+| **Compose in SwiftUI** | `ComposeUIViewController` + `UIViewControllerRepresentable` wiring |
+| **State bridging** | `makeCoordinator()`, push and bidirectional patterns, Kotlin `mutableStateOf` |
+| **SwiftUI in Compose** | `UIKitView`, `UIKitViewController`, `UIHostingController` |
+| **UIKit embedding** | Maps, text fields, camera, pickers via `UIKitView` |
+| **Teardown** | `dismantleUIViewController`, `AsyncStream.onTermination` |
+| **Touch routing** | `UIKitInteropProperties` cooperative vs non-cooperative gestures |
+
+> 🔗 Bridging KMP data and logic into Swift? See the companion [**swift-kmp**](https://github.com/sorunokoe/swift-kmp-skill) skill.
 
 ---
 
