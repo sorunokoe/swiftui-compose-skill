@@ -12,4 +12,4 @@ jobs:
       enable_ai_skill_update: true
       tracked_deps: '[{"alias": "compose-multiplatform", "repo": "JetBrains/compose-multiplatform"}]'
     secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      token: ${{ secrets.GITHUB_TOKEN }}
