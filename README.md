@@ -1,13 +1,14 @@
 ```
-  ╭──────────────────────────────────────────────╮
-  │                                              │
-  │           swiftui · compose                  │
-  │                                              │
-  │   Compose  ◄────────────────────►  SwiftUI   │
-  │                                              │
-  ╰──────────────────────────────────────────────╯
-         UIViewControllerRepresentable
-           makeCoordinator()  ·  UIHostingController
+  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+  ┃                                                     ┃
+  ┃   ◆  swiftui · compose             AI Coding Skill  ┃
+  ┃   ─────────────────────────────────────────────     ┃
+  ┃                                                     ┃
+  ┃   Compose  ◄────────────────────────────► SwiftUI   ┃
+  ┃                                                     ┃
+  ┃   UIViewControllerRepresentable · makeCoordinator() ┃
+  ┃                                                     ┃
+  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
 <div align="center">
