@@ -16,7 +16,10 @@
 [![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?logo=swift&logoColor=white)](https://swift.org)
 [![iOS stable](https://img.shields.io/badge/iOS-stable%20since%201.8-blue)](https://www.jetbrains.com/compose-multiplatform/)
 [![Works with Claude](https://img.shields.io/badge/Works%20with-Claude-9370DB)](https://claude.ai)
+[![Works with Codex](https://img.shields.io/badge/Works%20with-Codex-412991?logo=openai&logoColor=white)](https://openai.com/codex)
 [![Works with GitHub Copilot](https://img.shields.io/badge/Works%20with-GitHub%20Copilot-2ea44f?logo=github)](https://github.com/features/copilot)
+[![Works with Cursor](https://img.shields.io/badge/Works%20with-Cursor-000000)](https://cursor.com)
+[![Works with Gemini](https://img.shields.io/badge/Works%20with-Gemini-4285F4?logo=google&logoColor=white)](https://gemini.google.com)
 
 **An AI coding skill for bidirectional interop between  
 Compose Multiplatform and SwiftUI.**
@@ -161,7 +164,20 @@ Full patterns with code in [`references/state-sharing.md`](references/state-shar
 ## Automated Maintenance
 
 This skill is governed by [**skills-evolution**](https://github.com/sorunokoe/skills-evolution).
-A monthly GitHub Actions workflow ([`.github/workflows/skill-health.yml`](.github/workflows/skill-health.yml)) runs an OSS skill health check:
+
+### gh-aw agentic workflows (recommended)
+
+```bash
+# PR review — posts AI feedback on every PR touching SKILL.md or references/**
+gh aw add sorunokoe/skills-evolution/workflows/oss-skill-pr-check.md@latest
+# Monthly update — checks version references and doc links
+gh aw add sorunokoe/skills-evolution/workflows/oss-skill-update.md@latest
+gh aw compile
+```
+
+### GitHub Actions (already configured)
+
+[`.github/workflows/skill-health.yml`](.github/workflows/skill-health.yml) runs monthly and on demand:
 
 - **Structural audit** — broken local links, missing frontmatter fields
 - **AI content update** — checks `SKILL.md` + `references/*.md` against the latest `compose-multiplatform` release; proposes conservative patches via GitHub Models
