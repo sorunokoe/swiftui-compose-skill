@@ -86,6 +86,10 @@ Apple's documentation confirms the intended lifecycle:
 
 ```bash
 # Clone into the canonical skill location:
+
+<!-- skill-evolution:badge:begin -->
+[![Skill evolved 1×](https://img.shields.io/badge/evolved-1%C3%97_newborn-blue?style=flat-square&logo=dna&logoColor=white)](https://github.com/sorunokoe/swiftui-compose-skill/pulls?q=is%3Apr+is%3Amerged)
+<!-- skill-evolution:badge:end -->
 git clone https://github.com/sorunokoe/swiftui-compose-skill.git \
   /path/to/your-project/.github/skills/swiftui-compose
 

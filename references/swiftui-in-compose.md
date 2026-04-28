@@ -120,7 +120,7 @@ fun NativeTextField(text: String, onTextChange: (String) -> Unit) {
 }
 ```
 
-### `UIKitView` Parameters (1.8.0)
+### `UIKitView` Parameters (1.10.3)
 
 | Parameter | Purpose |
 |-----------|---------|
