@@ -15,6 +15,7 @@
 [![Compose Multiplatform](https://img.shields.io/badge/CMP-1.8+-4CAF50)](https://www.jetbrains.com/compose-multiplatform/)
 [![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?logo=swift&logoColor=white)](https://swift.org)
 [![iOS stable](https://img.shields.io/badge/iOS-stable%20since%201.8-blue)](https://www.jetbrains.com/compose-multiplatform/)
+[![Maintained by skills-evolution](https://img.shields.io/badge/maintained%20by-skills--evolution-0ea5e9)](https://github.com/sorunokoe/skills-evolution)
 [![Works with Claude](https://img.shields.io/badge/Works%20with-Claude-9370DB)](https://claude.ai)
 [![Works with Codex](https://img.shields.io/badge/Works%20with-Codex-412991?logo=openai&logoColor=white)](https://openai.com/codex)
 [![Works with GitHub Copilot](https://img.shields.io/badge/Works%20with-GitHub%20Copilot-2ea44f?logo=github)](https://github.com/features/copilot)
