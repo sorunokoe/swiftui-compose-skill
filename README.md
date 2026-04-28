@@ -1,5 +1,6 @@
 <div align="center">
-```
+
+<pre align="center">
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃                                                     ┃
 ┃   ◆  swiftui · compose             AI Coding Skill  ┃
@@ -8,7 +9,7 @@
 ┃   Compose  ◄────────────────────────────► SwiftUI   ┃
 ┃                                                     ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-```
+</pre>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Compose Multiplatform](https://img.shields.io/badge/CMP-1.8+-4CAF50)](https://www.jetbrains.com/compose-multiplatform/)
