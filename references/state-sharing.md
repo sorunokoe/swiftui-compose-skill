@@ -247,7 +247,7 @@ Task {
 }
 ```
 
-See `swift-kmp/references/flow-bridging.md` for the full `AsyncStream` wrapping pattern.
+See your KMP tooling docs (SKIE, KMP-NativeCoroutines) for the full flow-bridging pattern.
 
 ---
 
@@ -327,6 +327,6 @@ AsyncStream { continuation in
 }
 ```
 
-When adapting Kotlin flows (via SKIE), the same `onTermination` pattern ensures the driving
-`Task` is cancelled when the consumer stops iterating — see `swift-kmp/references/flow-bridging.md`.
+When adapting Kotlin flows (via SKIE or KMP-NativeCoroutines), the same `onTermination` pattern ensures the driving
+`Task` is cancelled when the consumer stops iterating.
 

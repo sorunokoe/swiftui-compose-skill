@@ -44,7 +44,7 @@ consumes it through `UIViewControllerRepresentable`. This skill covers both dire
 - ❌ **`.id(someState)` on a Compose view** — tears down and recreates the `UIViewController` on every change; causes visual glitches and wasted memory
 - ❌ **Calling `buildController:` closure inside `updateUIViewController`** — creates a new Compose lifecycle on every SwiftUI update
 - ❌ **Storing a `@State` copy of the Kotlin holder** — use `makeCoordinator()` for a stable single reference
-- ❌ **Passing KMP types into feature modules** — wrap in Swift types before the feature boundary (see `swift-kmp` skill)
+- ❌ **Leaking KMP types beyond the integration layer** — wrap in Swift types at the Compose/SwiftUI boundary; downstream Swift code should not depend on Kotlin types directly
 
 ---
 
@@ -84,5 +84,4 @@ Compose Multiplatform on iOS requires one `Info.plist` entry or the app crashes 
 
 ## See Also
 
-- For KMP-specific bridge architecture (interactors, type mapping, flow bridging) → `swift-kmp` skill
 - For Kotlin `ComposeUIViewController` setup in KMP shared code → `references/compose-in-swiftui.md`

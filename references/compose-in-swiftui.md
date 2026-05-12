@@ -133,9 +133,9 @@ final class MapCoordinator {
     let holder: MapViewControllerHolder
     let controller: UIViewController
 
-    init(component: AppComponent, initialFilters: [MapFilter]) {
+    init(initialFilters: [MapFilter]) {
         // Kotlin creates both the holder and the UIViewController here:
-        holder = component.sharedViewsProvider.mapViewControllerHolder(filters: initialFilters)
+        holder = MapViewControllerHolder(initialFilters: initialFilters)
         controller = holder.controller
     }
 
@@ -145,12 +145,11 @@ final class MapCoordinator {
 }
 
 struct MapComposeView: UIViewControllerRepresentable {
-    let component: AppComponent
     var filters: [MapFilter]  // SwiftUI @State — may change
 
     func makeCoordinator() -> MapCoordinator {
         // Called ONCE — Kotlin controller created here
-        MapCoordinator(component: component, initialFilters: filters)
+        MapCoordinator(initialFilters: filters)
     }
 
     func makeUIViewController(context: Context) -> UIViewController {
